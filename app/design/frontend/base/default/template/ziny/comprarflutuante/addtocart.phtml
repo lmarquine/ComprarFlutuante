@@ -19,7 +19,7 @@
 <?php #if (Mage::getStoreConfig("comprarflutuante/general/enable")): ?>
     <?php #if ($_product->isSaleable()): ?>
         <?php $_product = $this->getProduct(); ?>
-        <?php $_title = $this->__('Add to Cart'); ?>
+        <?php $_tituloBotao = $this->__('Add to Cart'); ?>
         <div id="_comprar-flutuante" class="_comprar-flutuante">
             <span id="_area-comprar-flutuante" class="_area-comprar-flutuante" title="<?php echo $this->__('Buy Floating Button') ?>"></span>
             <span class="_area-precos">
@@ -28,9 +28,9 @@
                 <?php echo $this->getTierPriceHtml() ?>
             </span>
             <div class="add-to-cart-buttons">
-                <button type="button" title="<?php echo $_title ?>" class="button" onclick="productAddToCartForm.submit(this)">
+                <button type="button" title="<?php echo$_tituloBotao;?>" class="button" onclick="productAddToCartForm.submit(this)">
                     <span>
-                        <span><?php echo $_title ?></span>
+                        <span><?php echo $_tituloBotao; ?></span>
                     </span>
                 </button>
                 <?php echo $this->getChildHtml('', true, true) ?>
