@@ -17,8 +17,8 @@
  */
 ?>
 <?php if (Mage::getStoreConfig("comprarflutuante/general/enable")): ?>
-    <?php if ($_product->isSaleable()): ?>
-        <?php $_product = $this->getProduct(); ?>
+    <?php $_product = $this->getProduct(); ?>
+    <?php if ($_product->isSaleable()): ?>    
         <?php $_tituloBotao = $this->__('Add to Cart'); ?>
         <div id="_comprar-flutuante" class="_comprar-flutuante">
             <span id="_area-comprar-flutuante" class="_area-comprar-flutuante" title="<?php echo $this->__('Buy Floating Button') ?>"></span>
