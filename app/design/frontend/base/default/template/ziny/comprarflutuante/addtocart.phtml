@@ -16,8 +16,8 @@
  * @author     Agência Ziny <dev@agenciaziny.com.br>
  */
 ?>
-<?php #if (Mage::getStoreConfig("comprarflutuante/general/enable")): ?>
-    <?php #if ($_product->isSaleable()): ?>
+<?php if (Mage::getStoreConfig("comprarflutuante/general/enable")): ?>
+    <?php if ($_product->isSaleable()): ?>
         <?php $_product = $this->getProduct(); ?>
         <?php $_tituloBotao = $this->__('Add to Cart'); ?>
         <div id="_comprar-flutuante" class="_comprar-flutuante">
@@ -28,7 +28,7 @@
                 <?php echo $this->getTierPriceHtml() ?>
             </span>
             <div class="add-to-cart-buttons">
-                <button type="button" title="<?php echo$_tituloBotao;?>" class="button" onclick="productAddToCartForm.submit(this)">
+                <button type="button" title="<?php echo$_tituloBotao; ?>" class="button" onclick="productAddToCartForm.submit(this)">
                     <span>
                         <span><?php echo $_tituloBotao; ?></span>
                     </span>
@@ -36,5 +36,5 @@
                 <?php echo $this->getChildHtml('', true, true) ?>
             </div>
         </div>
-    <?php #endif; ?>
-<?php #endif; ?>
+    <?php endif; ?>
+<?php endif; ?>
